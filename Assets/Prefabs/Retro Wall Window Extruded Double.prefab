@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1269128127804470905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887318555406469235}
+  m_Layer: 0
+  m_Name: Retro Wall Window Extruded Double
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887318555406469235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269128127804470905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.850374, y: 0.6596174, z: -26.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8969617090247102931}
+  - {fileID: 3906175677449590484}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &359481215794509619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1887318555406469235}
+    m_Modifications:
+    - target: {fileID: 3766811196028031713, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_Name
+      value: Retro Wall Window Extruded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.030183792
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deaea4478ecca1a4092ec125fd5e385b, type: 3}
+--- !u!4 &8969617090247102931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+    type: 3}
+  m_PrefabInstance: {fileID: 359481215794509619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5670840551282290740
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1887318555406469235}
+    m_Modifications:
+    - target: {fileID: 3766811196028031713, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_Name
+      value: Retro Wall Window Extruded (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deaea4478ecca1a4092ec125fd5e385b, type: 3}
+--- !u!4 &3906175677449590484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8685008789774591712, guid: deaea4478ecca1a4092ec125fd5e385b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5670840551282290740}
+  m_PrefabAsset: {fileID: 0}

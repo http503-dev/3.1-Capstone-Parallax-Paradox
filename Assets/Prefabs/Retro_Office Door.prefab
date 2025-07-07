@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5123603564282717716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8954450397280291183}
+  m_Layer: 0
+  m_Name: Retro_Office Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8954450397280291183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123603564282717716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.972697, y: 10.000048, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6134905259444476132}
+  - {fileID: 687745767887223260}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &837121660207797586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8954450397280291183}
+    m_Modifications:
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657130304864254312, guid: 7b67cfb1ad30fef449d0155f06478168,
+        type: 3}
+      propertyPath: m_Name
+      value: Office Wall Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b67cfb1ad30fef449d0155f06478168, type: 3}
+--- !u!4 &687745767887223260 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 150114773009869966, guid: 7b67cfb1ad30fef449d0155f06478168,
+    type: 3}
+  m_PrefabInstance: {fileID: 837121660207797586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2370328855009198221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8954450397280291183}
+    m_Modifications:
+    - target: {fileID: 1268660086517268875, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_Name
+      value: Retro Wall Door Extruded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.10971308
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63df16f3a2128c9408fd7a67d3f19c55, type: 3}
+--- !u!4 &6134905259444476132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8486635872734910569, guid: 63df16f3a2128c9408fd7a67d3f19c55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2370328855009198221}
+  m_PrefabAsset: {fileID: 0}
