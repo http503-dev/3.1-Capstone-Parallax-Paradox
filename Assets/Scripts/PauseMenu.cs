@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Muhammad Farhan
+ * Date: 12/6/25
+ * Description: Script for handling pause menu logic
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

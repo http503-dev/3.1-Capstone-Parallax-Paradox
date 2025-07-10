@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5177185013919269024}
   - component: {fileID: 1465452965452094551}
   - component: {fileID: 4572428695403947938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Portal B Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

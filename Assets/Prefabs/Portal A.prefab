@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4694079347950746443}
   - component: {fileID: 8533088640121549476}
   - component: {fileID: 855606844035553399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Portal A Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

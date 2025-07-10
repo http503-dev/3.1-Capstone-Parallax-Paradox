@@ -7198,7 +7198,7 @@ MonoBehaviour:
     m_Bits: 64
   ignoreTargetMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 183
   offsetFactor: 0.8
 --- !u!1001 &1368012000
 PrefabInstance:

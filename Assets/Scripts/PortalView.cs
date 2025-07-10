@@ -1,3 +1,8 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 27/6/25
+ * Description: Script to handle what the player sees through the portal
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

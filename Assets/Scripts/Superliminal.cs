@@ -107,6 +107,10 @@ public class Superliminal : MonoBehaviour
         RaycastHit hit;   // Cast a ray forward from the camera position 
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, ignoreTargetMask))   // ignore the layer that is used to acquire targets so we don't hit the attached target with our ray
         {
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("PortalView"))
+            {
+                return;
+            }
             // If the hit object is a force field, drop the object
             if (hit.collider.CompareTag("ForceField"))
             {

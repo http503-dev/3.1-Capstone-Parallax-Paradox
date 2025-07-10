@@ -1,3 +1,8 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 12/6/25
+ * Description: Script to handle crosshair behaviour when looking at scalable objects
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

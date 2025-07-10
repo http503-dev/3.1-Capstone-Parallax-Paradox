@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Muhammad Farhan
  * Date: 19/5/2025
  * Description: Script for handling main menu logic
@@ -23,6 +23,11 @@ public class MainMenu : MonoBehaviour
     [Header("Level Select Buttons")]
     public Button[] levelButtons;
 
+    [Header("Room Select")]
+    public GameObject roomSelectPanel;
+    public Button[] roomButtons; // Room 1–5
+    private int currentRoomLevel = 1;
+
     [Header("Settings")]
     public GameObject settingsPanel;
     public Slider masterVolumeSlider;
@@ -40,6 +45,7 @@ public class MainMenu : MonoBehaviour
         confirmationPanel.SetActive(false);
         settingsPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
+        roomSelectPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
 
         int lastUnlockedLevel = PlayerPrefs.GetInt("LastUnlockedLevel", 0);
@@ -62,8 +68,16 @@ public class MainMenu : MonoBehaviour
 
     public void OnNewGame()
     {
+        // Clear all previous room progress (optional: loop through known levels)
+        for (int i = 1; i <= 5; i++)
+        {
+            PlayerPrefs.DeleteKey($"HighestRoomReached_Level {i}"); // Space is intentional if you're using "Level 1"
+        }
+
         PlayerPrefs.SetInt("HasSave", 1);
+        PlayerPrefs.SetInt("IsNewGame", 1); // Flag so we know it's a fresh start
         PlayerPrefs.SetInt("LastUnlockedLevel", 1);
+        PlayerPrefs.SetInt("LastRoom", 0);
         SceneManager.LoadScene("Level 1");
     }
 
@@ -79,6 +93,12 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(true);
     }
 
+    public void OnBackFromRoomSelect()
+    {
+        roomSelectPanel.SetActive(false);
+        levelSelectPanel.SetActive(true);
+    }
+
     public void LoadLevel(int levelIndex)
     {
         SceneManager.LoadScene("Level " + levelIndex);
@@ -88,10 +108,45 @@ public class MainMenu : MonoBehaviour
     {
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].interactable = (i + 1) <= unlockedLevel;
+            int levelIndex = i + 1;
+            Button levelButton = levelButtons[i];
 
-            int index = i + 1; // avoid closure issue in lambda
-            levelButtons[i].onClick.AddListener(() => LoadLevel(index));
+            bool isUnlocked = levelIndex <= unlockedLevel;
+            levelButton.interactable = isUnlocked;
+            levelButton.onClick.RemoveAllListeners();
+
+            if (isUnlocked)
+            {
+                levelButton.onClick.AddListener(() => OpenRoomSelect(levelIndex));
+            }
+        }
+    }
+
+    private void OpenRoomSelect(int levelIndex)
+    {
+        currentRoomLevel = levelIndex;
+        levelSelectPanel.SetActive(false);
+        roomSelectPanel.SetActive(true);
+
+        string levelName = $"Level {levelIndex}"; // Use actual scene names if needed
+        string roomKey = $"HighestRoomReached_{levelName}";
+        int highestRoom = PlayerPrefs.GetInt(roomKey, 0); // default 0 = no room unlocked
+
+        for (int i = 0; i < roomButtons.Length; i++)
+        {
+            int roomIndex = i + 1;
+            Button btn = roomButtons[i];
+            btn.interactable = roomIndex <= highestRoom;
+            btn.onClick.RemoveAllListeners();
+
+            if (roomIndex <= highestRoom)
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    PlayerPrefs.SetInt("LastRoom", roomIndex);
+                    SceneManager.LoadScene(levelName);
+                });
+            }
         }
     }
 
@@ -127,6 +182,14 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("HasSave");
         PlayerPrefs.DeleteKey("LastUnlockedLevel");
+        PlayerPrefs.DeleteKey("LastRoom");
+
+        // Clear room progress for all levels if needed (e.g. Level1 to Level5)
+        for (int i = 1; i <= 5; i++)
+        {
+            PlayerPrefs.DeleteKey($"HighestRoomReached_Level{i}");
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

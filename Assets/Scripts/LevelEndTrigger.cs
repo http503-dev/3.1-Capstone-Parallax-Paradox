@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Muhammad Farhan
  * Date: 19/5/2025
  * Description: Script for handling the end of levels
@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelEndTrigger : MonoBehaviour
 {
-    public int nextLevelIndex; // E.g., 2 if going from Level1 to Level2
+    public int nextLevelIndex; // E.g., 2 if going from Level 1 to Level2
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +22,10 @@ public class LevelEndTrigger : MonoBehaviour
             {
                 PlayerPrefs.SetInt("LastUnlockedLevel", nextLevelIndex);
             }
+
+            // Clear LastRoom so the next level spawns at its initial point
+            PlayerPrefs.SetInt("LastRoom", 0);
+            PlayerPrefs.SetInt("IsNewGame", 0); // Optional but safe
 
             SceneManager.LoadScene("Level " + nextLevelIndex);
         }
