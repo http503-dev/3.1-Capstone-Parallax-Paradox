@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7498167005820183893}
-  m_Layer: 0
+  - component: {fileID: 662372253599094856}
+  m_Layer: 6
   m_Name: Office Table
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,6 +39,33 @@ Transform:
   - {fileID: 6682958967847359527}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &662372253599094856
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290772942871631674}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2894482715847654023
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,9 +78,9 @@ GameObject:
   - component: {fileID: 3209814874307265995}
   - component: {fileID: 1765822990621317039}
   - component: {fileID: 910864861325304129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder44
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,9 +183,9 @@ GameObject:
   - component: {fileID: 4288746806654319353}
   - component: {fileID: 7476934711331039439}
   - component: {fileID: 8914289756765518256}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder47
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,9 +288,9 @@ GameObject:
   - component: {fileID: 4894378249850412569}
   - component: {fileID: 5515297795036882263}
   - component: {fileID: 3350294770204113687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder48
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,9 +393,9 @@ GameObject:
   - component: {fileID: 7739453766952195671}
   - component: {fileID: 5441301315019782906}
   - component: {fileID: 6259120553608799321}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder49
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,9 +498,9 @@ GameObject:
   - component: {fileID: 436934226706183755}
   - component: {fileID: 6706167964393913111}
   - component: {fileID: 2104157213562347605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder45
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,9 +603,9 @@ GameObject:
   - component: {fileID: 4489442635604650718}
   - component: {fileID: 6322014040625468474}
   - component: {fileID: 1711182059231853751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder74
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,9 +708,9 @@ GameObject:
   - component: {fileID: 3378858192792056880}
   - component: {fileID: 8779175716872832454}
   - component: {fileID: 7419176408154780984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube77
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

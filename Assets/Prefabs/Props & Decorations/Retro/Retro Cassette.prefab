@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5202989290724695885}
   - component: {fileID: 6227864789110310332}
   - component: {fileID: 7396666127545861824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Retro Cassette
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

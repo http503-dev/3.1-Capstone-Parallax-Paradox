@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920133097139663224}
-  m_Layer: 0
+  - component: {fileID: 4120111403298082616}
+  m_Layer: 6
   m_Name: Medieval Skull Candle
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +36,33 @@ Transform:
   - {fileID: 2373493520911109516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &4120111403298082616
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762745674317271731}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2363548245939502501
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,9 +74,9 @@ GameObject:
   - component: {fileID: 7147058072960660834}
   - component: {fileID: 1439319399642279697}
   - component: {fileID: 2751126843493369227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: plate
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,9 +157,9 @@ GameObject:
   - component: {fileID: 2373493520911109516}
   - component: {fileID: 1078794628943326374}
   - component: {fileID: 8189917972857088469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wire
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,9 +241,9 @@ GameObject:
   - component: {fileID: 1742434874943827485}
   - component: {fileID: 2367323640354000481}
   - component: {fileID: 77001319623700979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface14
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,9 +345,9 @@ GameObject:
   - component: {fileID: 8754973675583985994}
   - component: {fileID: 8460648494368857649}
   - component: {fileID: 3054618253278571793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: candle
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2512661188433862012}
   - component: {fileID: 4809599975792141322}
   - component: {fileID: 4646329523670698075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube10
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,9 +117,9 @@ GameObject:
   - component: {fileID: 7612849479990421865}
   - component: {fileID: 9200253236825320193}
   - component: {fileID: 3698445060727267538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube7
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,9 +222,9 @@ GameObject:
   - component: {fileID: 2708525630127099811}
   - component: {fileID: 7036269666810267657}
   - component: {fileID: 7169529170948827728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube8
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,9 +327,9 @@ GameObject:
   - component: {fileID: 1207478732631365064}
   - component: {fileID: 5914250000893570710}
   - component: {fileID: 7953074179753286722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube6
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,9 +432,9 @@ GameObject:
   - component: {fileID: 5770300032944795754}
   - component: {fileID: 6040014722858447214}
   - component: {fileID: 7761097621277135382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube11
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,9 +537,9 @@ GameObject:
   - component: {fileID: 8350739864055013440}
   - component: {fileID: 2813554071091220147}
   - component: {fileID: 4502522021112774403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube2
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,9 +639,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1924713138495601711}
-  m_Layer: 0
+  - component: {fileID: 2966149695440747459}
+  m_Layer: 6
   m_Name: Medieval Table
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -670,6 +671,33 @@ Transform:
   - {fileID: 2551827792133350013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2966149695440747459
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296896776485098580}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4952305752549837669
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,9 +710,9 @@ GameObject:
   - component: {fileID: 9122328983255185717}
   - component: {fileID: 4824411418864512059}
   - component: {fileID: 5855034823143910762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube5
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -787,9 +815,9 @@ GameObject:
   - component: {fileID: 2657116372731692130}
   - component: {fileID: 1146912488900849128}
   - component: {fileID: 6497033340086298965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube1
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -893,9 +921,9 @@ GameObject:
   - component: {fileID: 8768931236899261524}
   - component: {fileID: 7044507165968505440}
   - component: {fileID: 6412909022836152864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube9
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

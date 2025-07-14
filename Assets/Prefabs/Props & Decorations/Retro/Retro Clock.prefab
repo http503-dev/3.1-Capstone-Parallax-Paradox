@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6547705451035028905}
   - component: {fileID: 8237226276538485965}
   - component: {fileID: 5267094567942385589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Retro Clock
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

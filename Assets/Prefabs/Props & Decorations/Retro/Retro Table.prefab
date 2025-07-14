@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5547906333817116861}
   - component: {fileID: 3437602903794355781}
   - component: {fileID: 809190602496977338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Retro Table
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

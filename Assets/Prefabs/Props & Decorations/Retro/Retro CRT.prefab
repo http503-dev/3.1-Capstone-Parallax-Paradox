@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5160667185195474277}
   - component: {fileID: 8907507620619541714}
   - component: {fileID: 2075107645746006497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Retro CRT
-  m_TagString: Untagged
+  m_TagString: Superliminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
