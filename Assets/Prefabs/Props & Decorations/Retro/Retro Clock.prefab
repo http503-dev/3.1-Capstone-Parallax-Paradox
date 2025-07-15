@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6547705451035028905}
   - component: {fileID: 8237226276538485965}
   - component: {fileID: 5267094567942385589}
+  - component: {fileID: -6691783806915644068}
   m_Layer: 6
   m_Name: Retro Clock
   m_TagString: Superliminal
@@ -107,3 +108,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.026342543, y: 0.1303402, z: 0.03248801}
   m_Center: {x: 0.0000000051222737, y: 0.00000000372529, z: 0}
+--- !u!54 &-6691783806915644068
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14670742288551855}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

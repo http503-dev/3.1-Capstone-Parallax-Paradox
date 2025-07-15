@@ -30,6 +30,13 @@ public class PortalView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool isVisible = IsVisibleFrom(Camera.main);
+
+        // Enable the portal camera only if this portal is visible
+        portalView.enabled = isVisible;
+
+        if (!IsVisibleFrom(Camera.main)) return;
+
         // Compute relative matrix from the main camera to the other portal
         Matrix4x4 camToPortal = transform.localToWorldMatrix * otherPortal.transform.worldToLocalMatrix;
 
@@ -55,4 +62,11 @@ public class PortalView : MonoBehaviour
         portalView.nearClipPlane = Mathf.Max(0.01f, nearOffset);
 
     }
+
+    private bool IsVisibleFrom(Camera cam)
+    {
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);
+        return GeometryUtility.TestPlanesAABB(planes, portalMesh.bounds);
+    }
+
 }
