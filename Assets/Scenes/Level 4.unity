@@ -1685,6 +1685,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2132093234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &227214504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227214506}
+  - component: {fileID: 227214505}
+  m_Layer: 0
+  m_Name: Room Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &227214505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227214504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106997c285fac614ba3a4c5c867ffbed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  newGameSpawnPoint: {fileID: 0}
+  player: {fileID: 0}
+--- !u!4 &227214506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227214504}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: 5.3558097, y: 2.9152172, z: 0.72421265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &228202951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14994,9 +15046,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 1238914772}
   - {fileID: 861700686}
+  - {fileID: 1340109179}
   - {fileID: 20308682}
   - {fileID: 193313964}
-  - {fileID: 1340109179}
+  - {fileID: 227214506}
   - {fileID: 960452059}
   - {fileID: 748773003}
   - {fileID: 821623708}
