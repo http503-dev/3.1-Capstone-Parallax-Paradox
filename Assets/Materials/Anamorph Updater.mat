@@ -117,8 +117,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ProjectionDir: {r: 0.99957937, g: -0.02879456, b: -0.0035177523, a: 0}
-    - _ProjectionOrigin: {r: 85.29375, g: 9.950221, b: -2.062639, a: 1}
+    - _ProjectionDir: {r: 0.30321094, g: 0.23707515, b: -0.9229619, a: 0}
+    - _ProjectionOrigin: {r: -37.988483, g: 9.959672, b: 4.864537, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4276324952416135236
