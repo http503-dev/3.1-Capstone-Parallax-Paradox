@@ -23,6 +23,7 @@ public class Superliminal : MonoBehaviour
     public LayerMask ignoreTargetMask;   // The layer mask used to ignore the player and target objects while raycasting
     public float offsetFactor;   // The offset amount for positioning the object so it doesn't clip into walls
 
+    [SerializeField] private AudioClip pickupSFX;
 
     /// <summary>
     /// scaling and distance info
@@ -79,6 +80,12 @@ public class Superliminal : MonoBehaviour
                     originalDistance = Vector3.Distance(transform.position, target.position);   // Calculate the distance between the camera and the object
                     originalScale = target.localScale.x;   // Save the original scale of the object
                     targetScale = target.localScale;   // Set target scale to be the same as the original
+
+                    // Play pickup sound effect
+                    if (pickupSFX != null)
+                    {
+                        AudioManager.Instance.PlaySFX(pickupSFX, target.position);
+                    }
                 }
             }
 

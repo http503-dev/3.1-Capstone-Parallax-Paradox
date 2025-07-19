@@ -13,6 +13,13 @@ public class PressurePad : MonoBehaviour
     [SerializeField] private PressureDoor currentDoor;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private AudioClip padSFXClip;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        AudioManager.Instance.PlaySFX(padSFXClip, transform.position);
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Superliminal"))
@@ -28,6 +35,7 @@ public class PressurePad : MonoBehaviour
         {
             currentDoor.RemovePressureSwitch(this);
             animator.SetBool("Down", false);
+            AudioManager.Instance.PlaySFX(padSFXClip, transform.position);
         }
     }
 }

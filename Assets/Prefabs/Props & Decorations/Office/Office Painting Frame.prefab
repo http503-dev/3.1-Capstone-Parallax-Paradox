@@ -124,6 +124,7 @@ MonoBehaviour:
   activationDistance: 0.5
   maxAngleDifference: 5
   requiredForward: {x: 0, y: 0, z: 1}
+  pickupSFX: {fileID: 8300000, guid: 5c3e442d3d707104ca0066df082f955a, type: 3}
 --- !u!1 &7218229726176127512
 GameObject:
   m_ObjectHideFlags: 0

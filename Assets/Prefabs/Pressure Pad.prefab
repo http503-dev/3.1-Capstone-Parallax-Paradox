@@ -336,3 +336,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDoor: {fileID: 0}
   animator: {fileID: 8564500268080377397}
+  padSFXClip: {fileID: 8300000, guid: 22b7f6695b663e54dab5cbe25adcab6b, type: 3}

@@ -27,9 +27,6 @@ public class PauseMenu : MonoBehaviour
     public Button exitToMainMenuButton;
     public Button exitToDesktopButton;
 
-    [Header("Settings UI")]
-    public Slider volumeSlider;
-
     [Header("Confirmation UI")]
     public TextMeshProUGUI confirmText;     // Text field to show "Are you sure?" etc.
     public Button confirmYesButton;
@@ -54,14 +51,6 @@ public class PauseMenu : MonoBehaviour
 
         confirmYesButton.onClick.AddListener(OnConfirmYes);
         confirmNoButton.onClick.AddListener(OnConfirmNo);
-
-        // Hook up volume slider callback
-        volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
-
-        // Load saved volume (same key as MainMenu)
-        //float savedVol = PlayerPrefs.GetFloat("MasterVolume", 1f);
-        //volumeSlider.value = savedVol;
-        //AudioManager.Instance.SetMasterVolume(savedVol);
     }
 
     private void Update()

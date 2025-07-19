@@ -15,6 +15,8 @@ public class AnamorphReveal : MonoBehaviour
     public float maxAngleDifference = 5f; // in degrees
     public Vector3 requiredForward = Vector3.forward; // override in inspector
 
+    [SerializeField] private AudioClip pickupSFX;
+
     private bool revealed = false;
 
     void Update()
@@ -34,6 +36,13 @@ public class AnamorphReveal : MonoBehaviour
         {
             objectToReveal.SetActive(true);
             revealed = true;
+
+            // Play pickup sound effect
+            if (pickupSFX != null)
+            {
+                AudioManager.Instance.PlaySFX(pickupSFX, transform.position);
+            }
+
             Debug.Log("Illusion revealed!");
         }
     }

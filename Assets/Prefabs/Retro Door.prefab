@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDoorOpen: 0
   requiredSwitchesToOpen: 1
+  doorSFXClip: {fileID: 8300000, guid: f7c2fbdbe3cea49469a7e24e2afcfbe2, type: 3}
 --- !u!1 &8174438399582636410
 GameObject:
   m_ObjectHideFlags: 0

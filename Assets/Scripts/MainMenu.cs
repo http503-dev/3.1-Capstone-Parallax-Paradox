@@ -30,7 +30,6 @@ public class MainMenu : MonoBehaviour
 
     [Header("Settings")]
     public GameObject settingsPanel;
-    public Slider masterVolumeSlider;
 
     [Header("Confirmation Panel")]
     public GameObject confirmationPanel;
@@ -154,23 +153,12 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         settingsPanel.SetActive(true);
-
-        // Load saved volume
-        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
-        masterVolumeSlider.value = savedVolume;
-        AudioManager.Instance.SetMasterVolume(savedVolume);
     }
 
     public void OnCloseSettings()
     {
         settingsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-    }
-
-    public void OnVolumeChanged(float value)
-    {
-        AudioManager.Instance.SetMasterVolume(value);
-        PlayerPrefs.SetFloat("MasterVolume", value);
     }
 
     public void OnDeleteSaveClicked()
