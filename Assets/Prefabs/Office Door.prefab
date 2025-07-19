@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369975960497404013}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.36946526, y: -1.110516, z: -0.045345563}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.36946487, y: -1.1105156, z: -0.045345306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7217186383806934731}
+  m_Father: {fileID: 608749001268659908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7455724176546194416
 MeshFilter:
@@ -132,12 +132,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526348155321059273}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.03106826, z: -0.029805986}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.031066895, z: -0.02980423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7217186383806934731}
+  m_Father: {fileID: 608749001268659908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &706801579086060789
 MeshFilter:
@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7217186383806934731}
   - component: {fileID: 5156625230548479866}
+  - component: {fileID: 1485307127232291635}
   m_Layer: 0
   m_Name: Office Door
   m_TagString: Untagged
@@ -240,9 +241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2607573837421046702}
-  - {fileID: 2450314610476948029}
-  - {fileID: 4609833827034822053}
+  - {fileID: 608749001268659908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5156625230548479866
@@ -260,6 +259,27 @@ MonoBehaviour:
   IsDoorOpen: 0
   requiredSwitchesToOpen: 1
   doorSFXClip: {fileID: 8300000, guid: db6475f6f8ab70d4591d21cad57f354f, type: 3}
+--- !u!95 &1485307127232291635
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082270366820579829}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c9d477438716fa4186e243cc7beca63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3317308530974952994
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,12 +307,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3317308530974952994}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0007440608, y: 0.049117286, z: 0.048567493}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00074386597, y: 0.049118042, z: 0.048568726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7217186383806934731}
+  m_Father: {fileID: 608749001268659908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8072096089160096540
 MeshFilter:
@@ -365,3 +385,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9574951, y: 0.25421143, z: 0.123640135}
   m_Center: {x: 0.0000003427267, y: 0.000000074505806, z: -0.000000014901161}
+--- !u!1 &4356791443383413868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608749001268659908}
+  m_Layer: 0
+  m_Name: Door Anim Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &608749001268659908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356791443383413868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2607573837421046702}
+  - {fileID: 2450314610476948029}
+  - {fileID: 4609833827034822053}
+  m_Father: {fileID: 7217186383806934731}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

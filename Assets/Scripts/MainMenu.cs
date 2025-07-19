@@ -16,16 +16,25 @@ public class MainMenu : MonoBehaviour
     public Button continueButton;
     public Button levelSelectButton;
 
+    [Header("Text References")]
+    public TextMeshProUGUI continueButtonText;
+    public TextMeshProUGUI levelSelectButtonText;
+
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject levelSelectPanel;
 
     [Header("Level Select Buttons")]
     public Button[] levelButtons;
+    public TextMeshProUGUI[] levelButtonTexts;
+
+    [Header("Level Button Images")]
+    public Image[] levelButtonImages;
 
     [Header("Room Select")]
     public GameObject roomSelectPanel;
     public Button[] roomButtons; // Room 1–5
+    public TextMeshProUGUI[] roomButtonTexts;
     private int currentRoomLevel = 1;
 
     [Header("Settings")]
@@ -52,6 +61,10 @@ public class MainMenu : MonoBehaviour
 
         continueButton.interactable = hasSave;
         levelSelectButton.interactable = lastUnlockedLevel > 0;
+
+        // Gray out text only
+        continueButtonText.color = hasSave ? Color.white : new Color(0.5f, 0.5f, 0.5f); // gray
+        levelSelectButtonText.color = lastUnlockedLevel > 0 ? Color.white : new Color(0.5f, 0.5f, 0.5f);
 
         SetupLevelButtons(lastUnlockedLevel);
     }
@@ -109,9 +122,15 @@ public class MainMenu : MonoBehaviour
         {
             int levelIndex = i + 1;
             Button levelButton = levelButtons[i];
+            TextMeshProUGUI levelText = levelButtonTexts[i];
+            Image levelImage = levelButtonImages[i];
 
             bool isUnlocked = levelIndex <= unlockedLevel;
             levelButton.interactable = isUnlocked;
+
+            levelText.color = isUnlocked ? Color.white : new Color(0.5f, 0.5f, 0.5f); // gray text
+            levelImage.color = isUnlocked ? Color.white : new Color(0.5f, 0.5f, 0.5f, 1f);// Set image color (white = normal, gray = locked)
+
             levelButton.onClick.RemoveAllListeners();
 
             if (isUnlocked)
@@ -135,7 +154,12 @@ public class MainMenu : MonoBehaviour
         {
             int roomIndex = i + 1;
             Button btn = roomButtons[i];
-            btn.interactable = roomIndex <= highestRoom;
+            TextMeshProUGUI text = roomButtonTexts[i];
+
+            bool isUnlocked = roomIndex <= highestRoom;
+            btn.interactable = isUnlocked;
+            text.color = isUnlocked ? Color.white : new Color(0.5f, 0.5f, 0.5f);
+
             btn.onClick.RemoveAllListeners();
 
             if (roomIndex <= highestRoom)

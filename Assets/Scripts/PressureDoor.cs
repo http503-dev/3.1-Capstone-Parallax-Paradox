@@ -14,7 +14,14 @@ public class PressureDoor : MonoBehaviour
     private List<PressurePad> currentSwitchesOpen = new();
     public int CurrentSwitchesOpen => currentSwitchesOpen.Count;
 
+    private Animator animator;
+
     [SerializeField] private AudioClip doorSFXClip;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void AddPressureSwitch(PressurePad currentSwitch)
     {
@@ -50,8 +57,9 @@ public class PressureDoor : MonoBehaviour
     {
         if (IsDoorOpen)
         {
+            animator.SetBool("Open", false); // close
             AudioManager.Instance.PlaySFX(doorSFXClip, transform.position);
-            this.gameObject.SetActive(true);
+            //this.gameObject.SetActive(true);
             IsDoorOpen = false;
         }
     }
@@ -60,8 +68,9 @@ public class PressureDoor : MonoBehaviour
     {
         if (!IsDoorOpen)
         {
+            animator.SetBool("Open", true);  // open
             AudioManager.Instance.PlaySFX(doorSFXClip, transform.position);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
             IsDoorOpen = true;
         }
     }
