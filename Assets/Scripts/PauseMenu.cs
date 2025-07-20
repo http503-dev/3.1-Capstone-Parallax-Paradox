@@ -169,7 +169,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         // Load your main menu scene (make sure this name matches exactly)
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
+        LoadingManager.Instance.LoadScene("MainMenu");
     }
 
     private void DoExitToDesktop()

@@ -45,7 +45,8 @@ public class LevelEndTrigger : MonoBehaviour
                 PlayerPrefs.SetInt("LastRoom", 0);
                 PlayerPrefs.SetInt("IsNewGame", 0); // Optional but safe
 
-                SceneManager.LoadScene("Level " + nextLevelIndex);
+                //SceneManager.LoadScene("Level " + nextLevelIndex);
+                LoadingManager.Instance.LoadScene("Level " +  nextLevelIndex);
             }
         }
     }
@@ -55,6 +56,7 @@ public class LevelEndTrigger : MonoBehaviour
         yield return new WaitForSecondsRealtime(creditsDuration); // Unaffected by Time.timeScale
 
         Time.timeScale = 1f; // Unpause
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
+        LoadingManager.Instance.LoadScene("MainMenu");
     }
 }

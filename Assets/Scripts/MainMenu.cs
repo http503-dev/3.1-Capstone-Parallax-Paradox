@@ -74,7 +74,8 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("HasSave", 0) == 1)
         {
             int lastLevel = PlayerPrefs.GetInt("LastUnlockedLevel", 1);
-            SceneManager.LoadScene("Level " + lastLevel);  // Assuming scenes are named "Level1", "Level2", etc.
+            //SceneManager.LoadScene("Level " + lastLevel);  // Assuming scenes are named "Level1", "Level2", etc.
+            LoadingManager.Instance.LoadScene("Level " + lastLevel);
         }
     }
 
@@ -90,7 +91,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("IsNewGame", 1); // Flag so we know it's a fresh start
         PlayerPrefs.SetInt("LastUnlockedLevel", 1);
         PlayerPrefs.SetInt("LastRoom", 0);
-        SceneManager.LoadScene("Level 1");
+        //SceneManager.LoadScene("Level 1");
+        LoadingManager.Instance.LoadScene("Level 1");
     }
 
     public void OnOpenLevelSelect()
@@ -113,7 +115,8 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel(int levelIndex)
     {
-        SceneManager.LoadScene("Level " + levelIndex);
+        //SceneManager.LoadScene("Level " + levelIndex);
+        LoadingManager.Instance.LoadScene("Level " + levelIndex);
     }
 
     private void SetupLevelButtons(int unlockedLevel)
@@ -167,7 +170,8 @@ public class MainMenu : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     PlayerPrefs.SetInt("LastRoom", roomIndex);
-                    SceneManager.LoadScene(levelName);
+                    //SceneManager.LoadScene(levelName);
+                    LoadingManager.Instance.LoadScene(levelName);
                 });
             }
         }
@@ -202,7 +206,9 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.DeleteKey($"HighestRoomReached_Level{i}");
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        string sceneName = SceneManager.GetActiveScene().name;
+        LoadingManager.Instance.LoadScene(sceneName);
     }
 
     // Generic confirm popup
