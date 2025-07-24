@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Muhammad Farhan
+ * Date: 20/7/2025
+ * Description: Script for handling the loading of levels/loading screens
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

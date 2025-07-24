@@ -70,7 +70,7 @@ public class CrosshairScaler : MonoBehaviour
         if (hit)
         {
             // See if the hit object's tag is exactly "superliminal"
-            if (hitInfo.collider.CompareTag("Superliminal"))
+            if (hitInfo.collider.CompareTag("Superliminal") || hitInfo.collider.CompareTag("SuperliminalTutorial"))
             {
                 overValid = true;
             }

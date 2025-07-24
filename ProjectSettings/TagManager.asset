@@ -8,6 +8,9 @@ TagManager:
   - PressurePlate
   - ForceField
   - Superliminal
+  - SuperliminalTutorial
+  - PortalTutorial
+  - AnamorphicTutorial
   layers:
   - Default
   - TransparentFX
