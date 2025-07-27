@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     [Header("Buttons")]
     public Button resumeButton;
     public Button settingsButton;
+    public Button resetRoomButton;  
     public Button exitToMainMenuButton;
     public Button exitToDesktopButton;
 
@@ -46,6 +47,7 @@ public class PauseMenu : MonoBehaviour
         // Hook up button listeners
         resumeButton.onClick.AddListener(OnResumePressed);
         settingsButton.onClick.AddListener(OnSettingsPressed);
+        resetRoomButton.onClick.AddListener(OnResetRoomPressed);
         exitToMainMenuButton.onClick.AddListener(OnExitToMainMenuPressed);
         exitToDesktopButton.onClick.AddListener(OnExitToDesktopPressed);
 
@@ -123,6 +125,18 @@ public class PauseMenu : MonoBehaviour
         // Open the Settings sub‐panel (inside pause menu)
         settingsPanel.SetActive(true);
         confirmationPanel.SetActive(false);
+    }
+
+    private void OnResetRoomPressed()
+    {
+        ShowConfirmation("Are you sure you want to reset this room?\nOnly do this if you're soft locked.", DoResetRoom);
+    }
+
+    private void DoResetRoom()
+    {
+        Time.timeScale = 1f; // Unpause
+        string currentScene = SceneManager.GetActiveScene().name;
+        LoadingManager.Instance.LoadScene(currentScene);
     }
 
     private void OnExitToMainMenuPressed()

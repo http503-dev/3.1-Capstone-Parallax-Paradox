@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 3809478246153850424}
   - component: {fileID: 6760078762971846423}
   - component: {fileID: 6052211110897120377}
+  - component: {fileID: 4371068637951598577}
   m_Layer: 0
   m_Name: Pressure Base
   m_TagString: Untagged
@@ -337,3 +338,24 @@ MonoBehaviour:
   currentDoor: {fileID: 0}
   animator: {fileID: 8564500268080377397}
   padSFXClip: {fileID: 8300000, guid: 22b7f6695b663e54dab5cbe25adcab6b, type: 3}
+--- !u!65 &4371068637951598577
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502561421760961361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -42,8 +42,14 @@ public class MainMenu : MonoBehaviour
 
     [Header("Confirmation Panel")]
     public GameObject confirmationPanel;
-    public TextMeshProUGUI confirmationText; // Or TMP_Text
+    public TextMeshProUGUI confirmationText;
     private System.Action confirmAction; // Stores the action to perform if confirmed
+
+    [Header("Background Images")]
+    public Image backgroundPanel;  // Image component in the main menu to change randomly
+    public Sprite[] backgroundImages; // Array of sprites (images) to rotate through
+
+    public float imageSwitchInterval = 5f;  // Time interval to switch the image
 
     private void Start()
     {
@@ -67,6 +73,23 @@ public class MainMenu : MonoBehaviour
         levelSelectButtonText.color = lastUnlockedLevel > 0 ? Color.white : new Color(0.5f, 0.5f, 0.5f);
 
         SetupLevelButtons(lastUnlockedLevel);
+
+        // Start the background image switching
+        StartCoroutine(SwitchBackgroundImage());
+    }
+
+    // Coroutine to switch background images
+    private IEnumerator SwitchBackgroundImage()
+    {
+        while (true)
+        {
+            // Randomly choose a new image from the array
+            int randomIndex = Random.Range(0, backgroundImages.Length);
+            backgroundPanel.sprite = backgroundImages[randomIndex];
+
+            // Wait for the specified interval before changing the image again
+            yield return new WaitForSeconds(imageSwitchInterval);
+        }
     }
 
     public void OnContinue()
@@ -74,7 +97,12 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("HasSave", 0) == 1)
         {
             int lastLevel = PlayerPrefs.GetInt("LastUnlockedLevel", 1);
-            //SceneManager.LoadScene("Level " + lastLevel);  // Assuming scenes are named "Level1", "Level2", etc.
+            string levelKey = $"HighestRoomReached_Level {lastLevel}";
+            int highestRoom = PlayerPrefs.GetInt(levelKey, 1); // default to Room 1
+
+            // Force override LastRoom so RoomManager spawns player at the highest room
+            PlayerPrefs.SetInt("LastRoom", highestRoom);
+
             LoadingManager.Instance.LoadScene("Level " + lastLevel);
         }
     }
