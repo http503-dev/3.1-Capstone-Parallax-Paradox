@@ -40,6 +40,9 @@ public class MainMenu : MonoBehaviour
     [Header("Settings")]
     public GameObject settingsPanel;
 
+    [Header("How To Play")]
+    public GameObject howToPlayPanel;
+
     [Header("Confirmation Panel")]
     public GameObject confirmationPanel;
     public TextMeshProUGUI confirmationText;
@@ -58,6 +61,7 @@ public class MainMenu : MonoBehaviour
 
         confirmationPanel.SetActive(false);
         settingsPanel.SetActive(false);
+        howToPlayPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
         roomSelectPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
@@ -237,6 +241,18 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         string sceneName = SceneManager.GetActiveScene().name;
         LoadingManager.Instance.LoadScene(sceneName);
+    }
+
+    public void OnOpenHowToPlay()
+    {
+        mainMenuPanel.SetActive(false);
+        howToPlayPanel.SetActive(true);
+    }
+
+    public void OnCloseHowToPlay()
+    {
+        howToPlayPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 
     // Generic confirm popup

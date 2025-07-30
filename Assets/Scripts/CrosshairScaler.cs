@@ -17,15 +17,15 @@ public class CrosshairScaler : MonoBehaviour
     public Vector3 normalScale = Vector3.one * 1f;
 
     [Tooltip("Scale when hovering over a 'superliminal' object.")]
-    public Vector3 hoverScale = Vector3.one * 2f;
+    public Vector3 hoverScale = Vector3.one * 5f;
 
     [Tooltip("Speed at which crosshair scales (optional). Set to 0 for instant switch).")]
     [Range(0f, 20f)]
-    public float scaleLerpSpeed = 10f;
+    public float scaleLerpSpeed = 6f;
 
     [Header("Detection Settings")]
     [Tooltip("Maximum distance to raycast from the camera.")]
-    public float maxRayDistance = 100f;
+    public float maxRayDistance = 40f;
 
     // LayerMask for objects on the "targetable" layer
     private int targetableLayerMask;
