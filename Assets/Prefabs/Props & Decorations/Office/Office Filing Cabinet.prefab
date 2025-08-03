@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3509895619404930097}
   - component: {fileID: 7608800436909970587}
   - component: {fileID: 3839592046941724435}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCube75
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 632649449467463255}
   - component: {fileID: 2681383726102524808}
   - component: {fileID: 6941062210838528365}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder43
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 343748965028470442}
   - component: {fileID: 7101463071378485210}
   - component: {fileID: 7392448480401463695}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder42
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677968574374130551}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: group32
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6483218276186949271}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: group31
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 2454360743785484842}
   - component: {fileID: 4321460014623300637}
   - component: {fileID: 7304056031690250432}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCube76
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 3717537662726735173}
   - component: {fileID: 8558446396989707165}
   - component: {fileID: 4617143180883266216}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCube76
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 2038118495420461529}
   - component: {fileID: 4386553166184301624}
   - component: {fileID: 4655122811075956283}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCube76
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9054805294919883764}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: group29
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 5615859260185189101}
   - component: {fileID: 2645063852250159480}
   - component: {fileID: 582963329961710482}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder43
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 449787545337666364}
   - component: {fileID: 7423298580881359726}
   - component: {fileID: 8536354296216234504}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder42
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 8020233194992844189}
   - component: {fileID: 676758221123302998}
   - component: {fileID: 4256921500490004902}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder42
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 5523828172440138894}
   - component: {fileID: 1901465348426118622}
   - component: {fileID: 9053383324108832148}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder43
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1526015855287488673}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: group30
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 741351800195307992}
   - component: {fileID: 1482593943355245739}
   - component: {fileID: 6891771689628114403}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cover (1)
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1149,10 +1149,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2972497879996169644}
-  - component: {fileID: 1159295496921626253}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Office Filing Cabinet
-  m_TagString: Superliminal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,8 +1166,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -47.332245, y: 48.70593, z: -53.237}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9054805294919883764}
   - {fileID: 1526015855287488673}
@@ -1179,33 +1178,6 @@ Transform:
   - {fileID: 6805857242784427227}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1159295496921626253
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7602543507091643845}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8081373164392035393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1189,7 @@ GameObject:
   - component: {fileID: 5503460929372148685}
   - component: {fileID: 4929123572585771831}
   - component: {fileID: 4617137734178702394}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCube76
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1300,7 +1272,7 @@ GameObject:
   - component: {fileID: 3750706054192143403}
   - component: {fileID: 8103672825391897131}
   - component: {fileID: 4058410269549357894}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder42
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1384,7 +1356,7 @@ GameObject:
   - component: {fileID: 5334186417077190284}
   - component: {fileID: 5518059529135322264}
   - component: {fileID: 2295087810071542365}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cover
   m_TagString: Superliminal
   m_Icon: {fileID: 0}
@@ -1489,7 +1461,7 @@ GameObject:
   - component: {fileID: 7883344049121901931}
   - component: {fileID: 3085997798380177241}
   - component: {fileID: 7042363547948325868}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pCylinder43
   m_TagString: Superliminal
   m_Icon: {fileID: 0}

@@ -8798,7 +8798,7 @@ PrefabInstance:
     - target: {fileID: 2496704665924895684, guid: 7ce20f7eab8a8174caf04b38c5a146d6,
         type: 3}
       propertyPath: maxAngleDifference
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2656887940608424864, guid: 7ce20f7eab8a8174caf04b38c5a146d6,
         type: 3}
