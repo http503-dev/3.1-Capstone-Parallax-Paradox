@@ -125,7 +125,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SpecularColor: {r: 0.13843165, g: 0.14126332, b: 0.10946172, a: 1}
+    - _SpecularColor: {r: 0.06921583, g: 0.07063166, b: 0.05473086, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &352853009570672574
 MonoBehaviour:
