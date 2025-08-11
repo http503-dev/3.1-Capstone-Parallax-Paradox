@@ -7,11 +7,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles teleportation of the player and objects through linked portals,
+/// ensuring correct position, rotation, and cooldown to prevent teleport loops.
+/// </summary>
 public class PortalTeleporter : MonoBehaviour
 {
+    /// <summary>
+    /// The linked portal to teleport to.
+    /// </summary>
     public PortalTeleporter otherTeleporter;
-    public float teleportCooldown = 0.2f; // prevent rapid-fire teleporting
 
+    /// <summary>
+    /// Minimum time in seconds before the same object can teleport again.
+    /// </summary>
+    public float teleportCooldown = 0.2f;
+
+    /// <summary>
+    /// Tracks the last time each object teleported to prevent rapid re-teleportation.
+    /// </summary>
     private Dictionary<Transform, float> lastTeleportTime = new Dictionary<Transform, float>();
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +40,11 @@ public class PortalTeleporter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Determines if the object is allowed to teleport.
+    /// </summary>
+    /// <param name="other"></param>
+    /// <returns></returns>
     private bool CanTeleport(Collider other)
     {
         if (!other.CompareTag("Player") && !other.CompareTag("Superliminal"))
@@ -42,6 +61,11 @@ public class PortalTeleporter : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Teleports a held object relative to the player's portal transition.
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="rotationDelta"></param>
     private void TeleportHeldObject(Transform target, Quaternion rotationDelta)
     {
         Vector3 localPos = transform.worldToLocalMatrix.MultiplyPoint3x4(target.position);
@@ -51,6 +75,11 @@ public class PortalTeleporter : MonoBehaviour
         target.rotation = rotationDelta * target.rotation;
     }
 
+    /// <summary>
+    /// Teleports the object through the portal, adjusting position, rotation,
+    /// and handling special logic for players and carried objects.
+    /// </summary>
+    /// <param name="other"></param>
     private void Teleport(Collider other)
     {
         Transform obj = other.transform;

@@ -10,17 +10,30 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/// <summary>
+/// Handles game pausing, resuming, settings, and confirmation prompts.
+/// Disables player controls when paused and manages related UI panels.
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
+    /// <summary>
+    /// The player movement/look controller & Superliminal scaling script to disable when paused.
+    /// </summary>
     [Header("Gameplay Controllers")]
     public MonoBehaviour playerController;    
     public Superliminal superliminalScript;    
 
+    /// <summary>
+    /// Panels used in the pause menu.
+    /// </summary>
     [Header("Panels")]
-    public GameObject pauseMenuPanel;       // The main pause menu panel (Resume, Settings, Exit …)
-    public GameObject settingsPanel;        // The sub‐panel for adjusting volume
-    public GameObject confirmationPanel;    // The confirmation popup
+    public GameObject pauseMenuPanel;      
+    public GameObject settingsPanel;        
+    public GameObject confirmationPanel;    
 
+    /// <summary>
+    /// Buttons to access different functions/panels.
+    /// </summary>
     [Header("Buttons")]
     public Button resumeButton;
     public Button settingsButton;
@@ -28,8 +41,11 @@ public class PauseMenu : MonoBehaviour
     public Button exitToMainMenuButton;
     public Button exitToDesktopButton;
 
+    /// <summary>
+    /// Confirmation UI elements.
+    /// </summary>
     [Header("Confirmation UI")]
-    public TextMeshProUGUI confirmText;     // Text field to show "Are you sure?" etc.
+    public TextMeshProUGUI confirmText;     
     public Button confirmYesButton;
     public Button confirmNoButton;
 
@@ -71,6 +87,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Pauses the game, disables controls, and shows the pause menu.
+    /// </summary>
     private void PauseGame()
     {
         isPaused = true;
@@ -94,6 +113,9 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    /// <summary>
+    /// Resumes gameplay, re-enables controls, and hides menus.
+    /// </summary>
     private void ResumeGame()
     {
         isPaused = false;
@@ -151,6 +173,11 @@ public class PauseMenu : MonoBehaviour
         ShowConfirmation("Are you sure you want to quit the game?" + "\n" + "Any unsaved progress will be lost.", DoExitToDesktop);
     }
 
+    /// <summary>
+    /// Displays a confirmation dialog with the provided message and action.
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="onConfirm"></param>
     private void ShowConfirmation(string message, System.Action onConfirm)
     {
         // Hide Settings (if open) and ensure the pause menu is still visible behind it
@@ -182,8 +209,7 @@ public class PauseMenu : MonoBehaviour
         // Resume time before switching scenes
         Time.timeScale = 1f;
 
-        // Load your main menu scene (make sure this name matches exactly)
-        //SceneManager.LoadScene("MainMenu");
+        // Load your main menu scene
         LoadingManager.Instance.LoadScene("MainMenu");
     }
 

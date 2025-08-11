@@ -7,10 +7,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Renders the view through a linked portal by positioning and orienting a camera
+/// to simulate looking out from the other portal.
+/// </summary>
 public class PortalView : MonoBehaviour
 {
+    /// <summary>
+    /// The linked portal whose view will be rendered.
+    /// </summary>
     public PortalView otherPortal;
+
+    /// <summary>
+    /// Camera used to capture the view from the other portal.
+    /// </summary>
     public Camera portalView;
+
+    /// <summary>
+    /// Shader used for rendering the portal surface.
+    /// </summary>
     public Shader portalShader;
 
     [SerializeField] private MeshRenderer portalMesh;
@@ -63,6 +78,11 @@ public class PortalView : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Checks if the portal mesh is within the camera's frustum.
+    /// </summary>
+    /// <param name="cam"></param>
+    /// <returns></returns>
     private bool IsVisibleFrom(Camera cam)
     {
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);

@@ -7,16 +7,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Implements a forced perspective object scaling mechanic.
+/// Allows picking up, moving, and resizing objects based on camera distance.
+/// </summary>
 public class Superliminal : MonoBehaviour
 {
     /// <summary>
-    /// to reference target object
+    /// The currently held object, if any.
     /// </summary>
     [Header("Components")]
     public Transform target;
 
     /// <summary>
-    /// Parameters for scaling mechanic
+    /// Parameters for scaling mechanic.
     /// </summary>
     [Header("Parameter")]
     public LayerMask targetMask;   // The layer mask used to hit only potential targets with a raycast
@@ -26,7 +30,7 @@ public class Superliminal : MonoBehaviour
     [SerializeField] private AudioClip pickupSFX;
 
     /// <summary>
-    /// scaling and distance info
+    /// Scaling and distance info.
     /// </summary>
     float originalDistance;   // The original distance between the player camera and the target
     float originalScale;   // The original scale of the target objects prior to being resized
@@ -52,6 +56,9 @@ public class Superliminal : MonoBehaviour
         ResizeTarget();
     }
 
+    /// <summary>
+    /// Handles mouse input for picking up and dropping scalable objects.
+    /// </summary>
     void HandleInput()
     {
         if (Input.GetMouseButtonDown(0))
@@ -100,16 +107,15 @@ public class Superliminal : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adjusts the held object's position and scale based on the camera's distance.
+    /// </summary>
     void ResizeTarget()
     {
         if (target == null)
         {
             return;
         }
-
-        // Temporarily disable player collider
-        //Collider playerCollider = player.GetComponent<Collider>();
-        //playerCollider.enabled = false;
 
         RaycastHit hit;   // Cast a ray forward from the camera position 
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, ignoreTargetMask))   // ignore the layer that is used to acquire targets so we don't hit the attached target with our ray
@@ -136,13 +142,10 @@ public class Superliminal : MonoBehaviour
 
             target.transform.localScale = targetScale * originalScale;   // Set the scale for the target objectm, multiplied by the original scale
         }
-
-        // Re-enable player collider
-        //playerCollider.enabled = true;
     }
 
     /// <summary>
-    /// Drops scalable object if it hits a forcefield
+    /// Forces the player to drop the held object, used when intersecting with forcefields.
     /// </summary>
     public void ForceDrop()
     {

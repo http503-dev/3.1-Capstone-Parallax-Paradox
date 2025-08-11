@@ -7,14 +7,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Updates the material properties of an anamorphic projector shader 
+/// based on the position, direction, and settings of a specified camera.
+/// </summary>
 public class AnamorphicProjectorUpdater : MonoBehaviour
 {
+    /// <summary>
+    /// Camera that defines the viewpoint for the illusion.
+    /// </summary>
     [Header("Camera that defines the illusion viewpoint")]
     public Camera illusionCamera;
 
+    /// <summary>
+    /// Material that uses the AnamorphicProjector shader.
+    /// </summary>
     [Header("Material using the AnamorphicProjector shader")]
     public Material projectorMaterial;
 
+    /// <summary>
+    /// Called once per frame. Updates the shader's projection parameters
+    /// to match the camera's position, direction, field of view, and aspect ratio.
+    /// </summary>
     private void Update()
     {
         if (illusionCamera == null || projectorMaterial == null)

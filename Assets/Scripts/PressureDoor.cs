@@ -7,15 +7,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls a door that opens when a specified number of linked pressure pads are activated.
+/// </summary>
 public class PressureDoor : MonoBehaviour
 {
+    /// <summary>
+    /// Whether the door is currently open.
+    /// </summary>
     public bool IsDoorOpen = false;
+
     [SerializeField] private int requiredSwitchesToOpen = 1;
     private List<PressurePad> currentSwitchesOpen = new();
+
+    /// <summary>
+    /// The number of currently activated pressure pads linked to this door.
+    /// </summary>
     public int CurrentSwitchesOpen => currentSwitchesOpen.Count;
 
     private Animator animator;
-
     [SerializeField] private AudioClip doorSFXClip;
 
     private void Awake()
@@ -23,6 +33,10 @@ public class PressureDoor : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Adds an activated pressure pad to the list and checks if the door should open.
+    /// </summary>
+    /// <param name="currentSwitch">The pressure pad being activated.</param>
     public void AddPressureSwitch(PressurePad currentSwitch)
     {
         if (!currentSwitchesOpen.Contains(currentSwitch))
@@ -32,6 +46,10 @@ public class PressureDoor : MonoBehaviour
         TryOpen();
     }
 
+    /// <summary>
+    /// Removes a deactivated pressure pad from the list and checks if the door should close.
+    /// </summary>
+    /// <param name="currentSwitch">The pressure pad being deactivated.</param>
     public void RemovePressureSwitch(PressurePad currentSwitch)
     {
         if (currentSwitchesOpen.Contains(currentSwitch))
@@ -41,6 +59,9 @@ public class PressureDoor : MonoBehaviour
         TryOpen();
     }
 
+    /// <summary>
+    /// Determines whether to open or close the door based on the number of active pads.
+    /// </summary>
     private void TryOpen()
     {
         if (CurrentSwitchesOpen == requiredSwitchesToOpen)
@@ -59,7 +80,6 @@ public class PressureDoor : MonoBehaviour
         {
             animator.SetBool("Open", false); // close
             AudioManager.Instance.PlaySFX(doorSFXClip, transform.position);
-            //this.gameObject.SetActive(true);
             IsDoorOpen = false;
         }
     }
@@ -70,7 +90,6 @@ public class PressureDoor : MonoBehaviour
         {
             animator.SetBool("Open", true);  // open
             AudioManager.Instance.PlaySFX(doorSFXClip, transform.position);
-            //this.gameObject.SetActive(false);
             IsDoorOpen = true;
         }
     }

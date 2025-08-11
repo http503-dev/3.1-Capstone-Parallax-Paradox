@@ -8,11 +8,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
 
+/// <summary>
+/// Handles the activation and deactivation of a linked pressure door
+/// when the player or objects stand on or leave the pressure pad.
+/// </summary>
 public class PressurePad : MonoBehaviour
 {
     [SerializeField] private PressureDoor currentDoor;
     [SerializeField] private Animator animator;
-
     [SerializeField] private AudioClip padSFXClip;
 
     private void OnTriggerEnter(Collider other)

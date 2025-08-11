@@ -7,9 +7,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Teleports the player to a predefined target position when they enter the trigger zone.
+/// </summary>
 public class Teleport : MonoBehaviour
 {
+    /// <summary>
+    /// The transform position to teleport to.
+    /// </summary>
     public Transform teleportTarget;
+
+    /// <summary>
+    /// The player game object.
+    /// </summary>
     public GameObject player;
 
     private void OnTriggerEnter(Collider other)

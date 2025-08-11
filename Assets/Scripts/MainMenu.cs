@@ -10,50 +10,75 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Handles all main menu interactions including continuing games, starting new games,
+/// accessing settings, level selection, room selection, and confirmation prompts.
+/// Also manages dynamic background image rotation.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
+    /// <summary>
+    /// Primary navigation buttons
+    /// </summary>
     [Header("Main Buttons")]
     public Button continueButton;
     public Button levelSelectButton;
 
+    /// <summary>
+    /// Text labels for main menu buttons
+    /// </summary>
     [Header("Text References")]
     public TextMeshProUGUI continueButtonText;
     public TextMeshProUGUI levelSelectButtonText;
 
+    /// <summary>
+    /// Main menu & level select panels.
+    /// </summary>
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject levelSelectPanel;
 
+    /// <summary>
+    /// Level select UI.
+    /// </summary>
     [Header("Level Select Buttons")]
     public Button[] levelButtons;
     public TextMeshProUGUI[] levelButtonTexts;
-
     [Header("Level Button Images")]
     public Image[] levelButtonImages;
 
+    /// <summary>
+    /// Room select UI.
+    /// </summary>
     [Header("Room Select")]
     public GameObject roomSelectPanel;
     public Button[] roomButtons; // Room 1–5
     public TextMeshProUGUI[] roomButtonTexts;
     private int currentRoomLevel = 1;
 
+    /// <summary>
+    /// Settings, confirmation (with all the UI elements) & how to play panels.
+    /// </summary>
     [Header("Settings")]
     public GameObject settingsPanel;
-
     [Header("How To Play")]
     public GameObject howToPlayPanel;
-
     [Header("Confirmation Panel")]
     public GameObject confirmationPanel;
     public TextMeshProUGUI confirmationText;
     private System.Action confirmAction; // Stores the action to perform if confirmed
 
+    /// <summary>
+    /// Background image cycling.
+    /// </summary>
     [Header("Background Images")]
     public Image backgroundPanel;  // Image component in the main menu to change randomly
     public Sprite[] backgroundImages; // Array of sprites (images) to rotate through
-
     public float imageSwitchInterval = 5f;  // Time interval to switch the image
 
+    /// <summary>
+    /// Initializes the main menu, sets button states based on save data, and starts background image rotation.
+    /// </summary>
     private void Start()
     {
         Cursor.visible = true;
@@ -82,7 +107,10 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(SwitchBackgroundImage());
     }
 
-    // Coroutine to switch background images
+    /// <summary>
+    /// Rotates the background image at a fixed interval.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SwitchBackgroundImage()
     {
         while (true)
@@ -96,6 +124,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Continues from the last saved progress.
+    /// </summary>
     public void OnContinue()
     {
         if (PlayerPrefs.GetInt("HasSave", 0) == 1)
@@ -111,19 +142,21 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts a new game and resets relevant save data.
+    /// </summary>
     public void OnNewGame()
     {
         // Clear all previous room progress (optional: loop through known levels)
         for (int i = 1; i <= 5; i++)
         {
-            PlayerPrefs.DeleteKey($"HighestRoomReached_Level {i}"); // Space is intentional if you're using "Level 1"
+            PlayerPrefs.DeleteKey($"HighestRoomReached_Level {i}");
         }
 
         PlayerPrefs.SetInt("HasSave", 1);
         PlayerPrefs.SetInt("IsNewGame", 1); // Flag so we know it's a fresh start
         PlayerPrefs.SetInt("LastUnlockedLevel", 1);
         PlayerPrefs.SetInt("LastRoom", 0);
-        //SceneManager.LoadScene("Level 1");
         LoadingManager.Instance.LoadScene("Level 1");
     }
 
@@ -147,10 +180,13 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel(int levelIndex)
     {
-        //SceneManager.LoadScene("Level " + levelIndex);
         LoadingManager.Instance.LoadScene("Level " + levelIndex);
     }
 
+    /// <summary>
+    /// Configures level selection buttons based on unlocked levels.
+    /// </summary>
+    /// <param name="unlockedLevel"></param>
     private void SetupLevelButtons(int unlockedLevel)
     {
         for (int i = 0; i < levelButtons.Length; i++)
@@ -175,13 +211,17 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Opens room selection for the chosen level.
+    /// </summary>
+    /// <param name="levelIndex"></param>
     private void OpenRoomSelect(int levelIndex)
     {
         currentRoomLevel = levelIndex;
         levelSelectPanel.SetActive(false);
         roomSelectPanel.SetActive(true);
 
-        string levelName = $"Level {levelIndex}"; // Use actual scene names if needed
+        string levelName = $"Level {levelIndex}";
         string roomKey = $"HighestRoomReached_{levelName}";
         int highestRoom = PlayerPrefs.GetInt(roomKey, 0); // default 0 = no room unlocked
 
@@ -202,7 +242,6 @@ public class MainMenu : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     PlayerPrefs.SetInt("LastRoom", roomIndex);
-                    //SceneManager.LoadScene(levelName);
                     LoadingManager.Instance.LoadScene(levelName);
                 });
             }
@@ -238,7 +277,6 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.DeleteKey($"HighestRoomReached_Level{i}");
         }
 
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         string sceneName = SceneManager.GetActiveScene().name;
         LoadingManager.Instance.LoadScene(sceneName);
     }
@@ -255,7 +293,11 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(true);
     }
 
-    // Generic confirm popup
+    /// <summary>
+    /// Shows a confirmation dialog with a custom message and action.
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="onConfirm"></param>
     public void ShowConfirmation(string message, System.Action onConfirm)
     {
         confirmationText.text = message;
@@ -263,7 +305,6 @@ public class MainMenu : MonoBehaviour
         confirmAction = onConfirm;
     }
 
-    // Hook this to the Confirm button
     public void OnConfirm()
     {
         confirmationPanel.SetActive(false);
@@ -271,7 +312,6 @@ public class MainMenu : MonoBehaviour
         confirmAction = null;
     }
 
-    // Hook this to the Cancel button
     public void OnCancel()
     {
         confirmationPanel.SetActive(false);

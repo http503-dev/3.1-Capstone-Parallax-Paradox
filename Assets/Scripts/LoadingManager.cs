@@ -9,14 +9,27 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages asynchronous scene loading with a loading screen and progress bar.
+/// Implements a singleton pattern to persist across scenes.
+/// </summary>
 public class LoadingManager : MonoBehaviour
 {
+    /// <summary>
+    /// Singleton instance of the Loading Manager.
+    /// </summary>
     public static LoadingManager Instance;
 
+    /// <summary>
+    /// UI elements
+    /// </summary>
     [Header("UI")]
     public GameObject loadingScreen;
     public Slider progressBar;
 
+    /// <summary>
+    /// Ensures there is only one instance of the Loading Manager and persists it across scenes.
+    /// </summary>
     private void Awake()
     {
         if (Instance == null)
@@ -30,11 +43,20 @@ public class LoadingManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Initiates loading of a new scene by name.
+    /// </summary>
+    /// <param name="sceneName">The name of the scene to load.</param>
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
+    /// <summary>
+    /// Handles asynchronous scene loading with progress bar updates and a minimum display time.
+    /// </summary>
+    /// <param name="sceneName">The name of the scene to load.</param>
+    /// <returns></returns>
     private IEnumerator LoadSceneAsync(string sceneName)
     {
         loadingScreen.SetActive(true);
@@ -45,6 +67,7 @@ public class LoadingManager : MonoBehaviour
         float timer = 0f;
         float minDisplayTime = 1.5f;
 
+        // Update the progress bar until the scene is ready
         while (operation.progress < 0.9f)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
@@ -55,23 +78,24 @@ public class LoadingManager : MonoBehaviour
             yield return null;
         }
 
-        // Progress is at 90% - scene is ready but not yet activated
+        // Scene is ready to be activated
         if (progressBar != null)
             progressBar.value = 1f;
 
-        // Wait remaining time if scene loaded too fast
+        // Ensure the loading screen is displayed for at least the minimum time
         while (timer < minDisplayTime)
         {
             timer += Time.deltaTime;
             yield return null;
         }
 
-        // Let Unity switch to the new scene
+        // Activate the new scene
         operation.allowSceneActivation = true;
 
-        // Wait one frame to let the scene fully activate
+        // Wait one frame to ensure scene is fully loaded before hiding loading screen
         yield return null;
 
-        loadingScreen.SetActive(false); // Now it's safe to hide the screen
+        // Now it's safe to hide the screen
+        loadingScreen.SetActive(false); 
     }
 }

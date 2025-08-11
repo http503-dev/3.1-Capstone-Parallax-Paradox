@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Muhammad Farhan
  * Date: 27/6/25
  * Description: Handles saving player's room position and respawning based on saved room
@@ -8,14 +8,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages player spawn points and room progress saving.
+/// Spawns the player at the correct location based on saved progress or a new game state.
+/// </summary>
 public class RoomManager : MonoBehaviour
 {
+    /// <summary>
+    /// Spawn points for each room.
+    /// </summary>
     [Header("Room Spawn Points")]
     public Transform[] roomSpawnPoints; // Set in inspector: Room 1 -> index 0, Room 2 -> index 1, etc.
 
+    /// <summary>
+    /// The spawn point used when starting a new game.
+    /// </summary>
     [Header("New Game Spawn")]
     public Transform newGameSpawnPoint;
 
+    /// <summary>
+    /// Reference to the player's transform for setting spawn position and rotation.
+    /// </summary>
     [Header("Player Reference")]
     public Transform player; 
 
@@ -40,6 +53,10 @@ public class RoomManager : MonoBehaviour
         player.rotation = roomSpawnPoints[index].rotation;
     }
 
+    /// <summary>
+    /// Saves the player's progress in the current room, updating the highest room reached if necessary.
+    /// </summary>
+    /// <param name="roomIndex">The index of the room the player entered.</param>
     public void SaveRoomProgress(int roomIndex)
     {
         string currentScene = SceneManager.GetActiveScene().name;
@@ -59,7 +76,9 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    // Optional debug to clear room save (e.g., for testing)
+    /// <summary>
+    /// Debug utility to clear saved room progress for testing.
+    /// </summary>
     [ContextMenu("Clear Room Save")]
     public void ClearRoomSave()
     {

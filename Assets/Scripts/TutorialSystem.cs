@@ -7,13 +7,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Displays a hint UI when the player looks at specific interactable objects within range.
+/// </summary>
 public class TutorialSystem : MonoBehaviour
 {
-    public Camera playerCamera;  // Reference to the player's camera
-    public GameObject hintUI;    // Reference to the hint UI
+    /// <summary>
+    /// Reference to the player's camera
+    /// </summary>
+    public Camera playerCamera;
 
-    public float raycastDistance = 8f; // How far the raycast can detect objects
-    public string[] interactableTags = { "Superliminal", "PortalProp", "AnamorphicProp" }; // Tags for interactable props
+    /// <summary>
+    /// Reference to the hint UI
+    /// </summary>
+    public GameObject hintUI;
+
+    /// <summary>
+    /// How far the raycast can detect objects
+    /// </summary>
+    public float raycastDistance = 8f;
+
+    /// <summary>
+    /// Tags for interactable props
+    /// </summary>
+    public string[] interactableTags = { "Superliminal", "PortalProp", "AnamorphicProp" };
 
     private void Start()
     {
